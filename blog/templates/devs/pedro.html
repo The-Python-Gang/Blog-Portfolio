@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;  
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20;
+}
+
+.center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1600px;
+    margin:0 auto;
+    padding:0 2%;
+}
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+header{
+    padding: 20px 0;
+}
+.logo{
+    width: 50%;
+    right: 0;
+    top: 0;
+}
+.menu{
+    padding-top: 30px;
+    width: 50%;
+    text-align: right;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 20px;
+}
+section.sobre{
+    height: calc(100% - 200px);
+    position: relative;
+}
+.extras{
+    position:absolute;
+    bottom: -450;
+    right: -500;
+    width: 1100px;
+    height: 1000px;
+    border-radius: 50%;
+    background-color: #22777b;
+}
+.Programador{
+    position: absolute;
+    left: 190px;
+    top: 85px;
+}
+.redes-sociais{
+    position: absolute;
+    right: 2000px;
+    bottom: 1060px;
+}
+.redes-sociais img{
+    display: block;
+}
+.texto-sobre{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.texto-sobre h1{
+    margin: 20px 0;
+    font-size: 50px;
+    font-weight: bold;
+    max-width: 800px;
+    color: #22777b;
+}
+.texto-sobre p{
+    margin: 20px 0;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    max-width: 800px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.texto-sobre button{
+    border: 0;
+    background-color: #22777b;
+    color: white;
+    border-radius: 10px;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+}
+
+        </style>
+        <title>Portifólio Pedro</title>
+        <link href="css/style.css" rel="stylesheet"/>
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    </head>
+    <body>
+        {% block content %}
+        <header>
+            <div class="center"> 
+                <div class="logo">
+                    <img src="/media/images/c36c53b055ea1fec1ad99fa9d652538a-removebg-preview (2).png" width="200px"/>   
+                </div><!--intp-->
+                <div class="menu">
+                    <a href="/">Home</a>
+                    <a href="admin/">Log Out</a>
+                </div><!--menu-->
+            </div><!--center-->
+        </header>
+        <section class="sobre">
+            <div class="extras">
+            <div class="Programador">
+                <img src="/media/images/Programador.png" width="450px"/>
+            </div>
+            <div class="redes-sociais"> 
+                <a href="https://github.com/PedroArnaldo">
+                    <img src="/media/images/github.png" width="39px"/>
+                </a>
+                <a href="#">
+                    <img src="/media/images/instagram.png"width="39px"/>
+                </a>
+                <a href="https://www.linkedin.com/in/pedroarnaldoo/">
+                    <img src="/media/images/linkedin.png"width="39px"/>
+                </a>
+                <a href="http://wa.me/5521989498922">
+                    <img src="/media/images/whatsapp.png"width="39px"/>
+                </a>
+            </div>
+        </div><!--extras-->
+            <div class="center">
+                <div class="texto-sobre">   
+                    <h1>Pedro Arnaldo Madeira Lopes<br/>Estudante de Engenharia da Computação</h1>
+                    <p> Olá! Sou Pedro, estudante de Engenharia da Computação. Atualmente, estou focado em aumentar meus conhecimentos em C/C++ e Linux. Tenho experiência em desenvolvimento web, utilizando as linguagens JavaScript, C# e Python. Para conhecer meus projetos, acesse meu GitHub, e para conhecer minha carreira profissional, acesse meu LinkedIn.Meu indicador tipológico ou mais conhecido como "MBTI", é o ESFJ, se quiser saber um pouco mais sobre as características de um ESFJ clique no botão "Saiba Mais"</p>
+                    <a href="https://www.16personalities.com/br/personalidade-esfj"><button>Saiba Mais</button></a>
+                </div>
+            </div>
+            </div>
+        </section>
+        {% endblock %}
+    </body>
+</html>

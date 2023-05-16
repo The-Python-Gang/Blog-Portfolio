@@ -18,3 +18,20 @@ def post_detail(request, id):
         'post': post
     }
     return render(request, template_name, context)
+
+def devs(request):
+    template_devs = 'developers.html'
+    return render(request, template_devs)
+
+def dev_id(request, id):
+    template_dev = 'post-list.html'
+    if (id == 0):
+        template_dev = 'devs/leo.html'
+    if (id == 1):
+        template_dev = 'devs/max.html'
+    if (id == 2):
+        template_dev = 'devs/pedro.html'
+    if (id == 3):
+        template_dev = 'devs/richard.html'
+
+    return render(request, template_dev)
